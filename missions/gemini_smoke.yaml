@@ -1,0 +1,16 @@
+missions:
+  - thread_id: gemini_presentation_explorer_04
+    prompt: >
+      Perform a presentation-quality smoke exploration of the configured target
+      application. Start at the configured application URL and log in with the
+      configured demo credentials. Do not stop after authentication. After login,
+      explicitly exercise at least four distinct surfaces: select application-map
+      cards, search surfaces and change the risk filter, toggle discovery controls
+      and start a focused scan, submit a safe report-a-signal form, and inspect the
+      recent-signals feed. Verify a visible UI change after each interaction;
+      include one keyboard or scroll interaction and one empty-state or invalid
+      input check. Look for console errors, failed network requests, rendering
+      anomalies, accessibility problems, and confusing or inconsistent behavior.
+      Capture screenshot evidence for every confirmed issue and generate a
+      reproducible Playwright test for each bug. Do not delete data or perform
+      irreversible actions.
