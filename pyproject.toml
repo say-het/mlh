@@ -1,0 +1,59 @@
+[project]
+name = "agentic-test-explorer"
+version = "0.2.0"
+description = "Product-agnostic agentic exploratory QA framework for web applications"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Het Ashishbhai Modi" },
+]
+maintainers = [
+    { name = "Het Ashishbhai Modi" },
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "langchain>=1.2.15,<1.4.0",
+    "langchain-google-genai~=4.2.1",
+    "langchain-google-vertexai~=3.2.1",
+    "langchain-anthropic>=1.4.3,<1.6.0",
+    "langchain-community~=0.4.1",
+    "langchain-core~=1.3.0",
+    "langgraph~=1.1.9",
+    "playwright~=1.58.0",
+    "python-dotenv~=1.2.2",
+    "pyyaml~=6.0.1",
+    "pillow>=12.2,<12.4",
+    "langchain-mcp-adapters>=0.3.2,<0.4.0",
+    "langgraph-checkpoint-sqlite>=3.0.3,<3.2.0",
+    "aiosqlite~=0.22.1",
+    "httpx~=0.28.1",
+    "langmem~=0.0.30",
+]
+
+[project.optional-dependencies]
+visual = [
+    "streamlit>=1.30.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentic_explorer"]
+
+[tool.uv]
+package = true
+
+[project.urls]
+Homepage = "https://github.com/say-het/mlh"
+Repository = "https://github.com/say-het/mlh"
+"Source Code" = "https://github.com/say-het/mlh"
+Issues = "https://github.com/say-het/mlh/issues"
+
+[project.scripts]
+agent-explorer = "agentic_explorer.main:main"
+agent-auth = "agentic_explorer.auth_setup:main"

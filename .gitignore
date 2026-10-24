@@ -1,0 +1,19 @@
+.env
+.venv
+__pycache__/
+.DS_Store
+agent_memory.*
+auth.json
+.idea
+.claude
+config.yaml
+mcp_servers.json
+report_*
+.agent_state.json
+.agent_state.json.tmp
+.latest_vision.jpg
+
+# Python build artifacts
+*.egg-info/
+build/
+dist/
